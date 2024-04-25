@@ -11,9 +11,9 @@ namespace HttpSlackBot.Blocks.BaseBlocks
         {
         }
 
-        public override string Type => "input";
+        public override string Type => BlockTypes.Input;
         [JsonProperty("label")]
-        public virtual TextAttribute Label { get; } = new TextAttribute("plain_text", true);
+        public virtual TextAttribute Label { get; } = new TextAttribute(TextTypes.Plain, true);
         [JsonProperty("element")]
         public abstract BlockBase Element { get; }
     }

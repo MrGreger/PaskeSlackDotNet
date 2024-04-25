@@ -10,7 +10,7 @@ namespace HttpSlackBot.Blocks.Checkbox
         private CheckboxValue _value;
 
         [JsonProperty("text")]
-        public PlainText Text { get; set; } = new PlainText(true);
+        public PlainTextSection TextSection { get; set; } = new PlainTextSection(true);
         [JsonProperty("value")]
         public string SerializedValue { get; private set; }
         [JsonIgnore]

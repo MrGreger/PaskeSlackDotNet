@@ -6,14 +6,14 @@ using System.Text;
 
 namespace HttpSlackBot.Blocks
 {
-    public class MarkdownText : BlockBase
+    public class MarkdownTextSection : BlockBase
     {
-        public MarkdownText(bool withEmoji)
+        public MarkdownTextSection(bool withEmoji)
         {
-            Text = new TextAttribute("mrkdwn", withEmoji);
+            Text = new TextAttribute(TextTypes.Markdown, withEmoji);
         }
 
-        public override string Type => "section";
+        public override string Type => BlockTypes.Section;
         [JsonProperty("text")]
         public TextAttribute Text { get; }
     }

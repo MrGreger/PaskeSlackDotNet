@@ -8,7 +8,7 @@ namespace HttpSlackBot.Blocks
 {
     public class ActionsSection : BlockBase
     {
-        public override string Type => "actions";
+        public override string Type => BlockTypes.Actions;
         [JsonProperty("elements")]
         public IList<BlockBase> Elements { get; set; }
 
